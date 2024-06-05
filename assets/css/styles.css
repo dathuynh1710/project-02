@@ -3,7 +3,15 @@
 }
 
 :root {
-    --primary-color: #ff5b2e;
+    --main-font: "Public Sans", sans-serif;
+    --sub-font: "Poppins", sans-serif;
+    --primary-color-1st: #152427;
+    --primary-color-2nd: #143c3c;
+    --text-color-btn: #fff;
+    --desc-color: #7d8188;
+    --desc-weight: 500;
+    --title-color: #152427;
+    --title-weight: 600;
 }
 
 html {
@@ -12,17 +20,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: "Poppins", sans-serif;
-    background: #fffaf5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Sora", sans-serif;
+    font-family: "Public Sans", sans-serif;
 }
 
 input,
@@ -32,6 +30,7 @@ button {
     font-size: inherit;
     font-family: inherit;
 }
+
 /* Common */
 a {
     text-decoration: none;
@@ -41,4 +40,94 @@ a {
     width: 1170px;
     max-width: calc(100% - 48px);
     margin: 0 auto;
+}
+
+.btn {
+    --height: 57px;
+    display: inline-block;
+    padding: 0 20px;
+    min-width: 173px;
+    height: var(--height);
+    line-height: var(--height);
+    border-radius: 40px;
+    border: 1.5px solid #143c3c;
+    color: var(--text-color-btn);
+    background: var(--primary-color-2nd);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/*^^^^^^^ ======Header====== ^^^^^^^*/
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 28px 0 13px;
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+}
+
+.header__top::before {
+    position: absolute;
+    bottom: 1px;
+    width: 1140px;
+    content: "";
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #fff 0%,
+        #dddcdc 51.09%,
+        rgba(212, 212, 212, 0) 99.68%
+    );
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    position: relative;
+    transition: 0.25s;
+}
+
+.nav__link {
+    display: inline-block;
+    padding: 4px 19px;
+    color: #575d5e;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.nav__link--active,
+.nav__link:hover {
+    color: #152427;
+}
+
+.nav__link.nav__link--active::after {
+    position: absolute;
+    content: "";
+    left: 19px;
+    bottom: -28px;
+    display: inline-block;
+    background: #143c3c;
+    width: 16px;
+    height: 2px;
+}
+
+.header__cta {
+    margin-left: 69px;
 }
