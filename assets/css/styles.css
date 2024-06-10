@@ -343,3 +343,128 @@ a {
     font-weight: 600;
     letter-spacing: 1.995px;
 }
+
+/*^^^^^^^ ======Services====== ^^^^^^^*/
+.services {
+    margin-top: 106px;
+}
+
+.service__sub {
+    margin-left: 53px;
+    position: relative;
+    color: var(--primary-color-1st);
+    font-family: var(--sub-font);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.63;
+}
+
+.service__sub::before {
+    position: absolute;
+    top: 9px;
+    left: -52px;
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background: var(--primary-color-1st);
+}
+
+.service__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service__heading {
+    margin-top: 20px;
+    position: relative;
+    max-width: 520px;
+    color: var(--primary-color-1st);
+    font-family: var(--sub-font);
+    font-size: 4.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.24;
+}
+
+.service__heading::after {
+    position: absolute;
+    top: 80px;
+    left: 359px;
+    content: "";
+    display: inline-block;
+    width: 66px;
+    height: 2px;
+    background: var(--primary-color-1st);
+}
+
+.service__control {
+    display: flex;
+    gap: 17px;
+    align-items: flex-end;
+    margin: 0 73px 9px 0;
+}
+
+.control__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #e2eddf;
+    transition: 0.25s;
+}
+
+.control__btn:hover {
+    background: #143c3c;
+    color: #fff;
+}
+
+.service__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 76px;
+}
+
+.service-item__img {
+    height: 318px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.service-item__info {
+    padding: 24px 0;
+    transition: 0.25s;
+    border-radius: 0 0 20px 20px;
+}
+
+.service-item__heading {
+    color: #152427;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.service-item__desc {
+    margin-top: 18px;
+    max-width: 268px;
+    color: var(--desc-color);
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.71;
+}
+
+.service-item:hover .service-item__info {
+    padding-left: 18px;
+    background: #fff;
+    box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+    transition: 0.25s;
+}
